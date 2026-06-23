@@ -1,10 +1,10 @@
-# Image Compressor & Filter Studio
+# Image Optimizer Pro
 
-A modern browser-based image optimization and editing tool that allows users to compress, resize, convert, and enhance images entirely on the client side.
+A modern browser-based image optimization and editing tool that lets users compress, resize, convert, and enhance images directly in their browser.
 
-No server uploads. No data collection. Everything runs locally in your browser for maximum privacy and performance.
+No uploads. No servers. No tracking.
 
----
+Everything runs locally using JavaScript and the Canvas API.
 
 ## Features
 
