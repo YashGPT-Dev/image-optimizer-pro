@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client-Side Image Compressor & Filter Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Image Compressor & Filter Studio</h1>
+        <p>100% private, browser-based image optimization and editing tool.</p>
+      </header>
+      <div class="studio-layout">
+        <aside class="panel">
+          <div class="control-group">
+            <label for="file-input">Load Image</label>
+            <input
+              type="file"
+              id="file-input"
+              accept="image/jpeg, image/png, image/webp"
+            />
+          </div>
+          <hr class="divider" />
+          <h3>Compression</h3>
+          <div class="control-group">
+            <label for="compress-quality">Quality (JPEG/WebP)</label>
+            <input
+              type="range"
+              id="compress-quality"
+              min="1"
+              max="100"
+              value="80"
+            />
+            <span class="value-display" id="quality-val">80%</span>
+          </div>
+          <div class="control-group">
+            <label for="max-width">Max Width (Pixels)</label>
+            <input
+              type="range"
+              id="max-width"
+              min="200"
+              max="3840"
+              value="1920"
+              step="10"
+            />
+            <span class="value-display" id="width-val">1920px</span>
+          </div>
+          <div class="control-group">
+            <label for="output-format">Output Format</label>
+            <select id="output-format">
+              <option value="image/jpeg">JPEG</option>
+              <option value="image/webp">WebP</option>
+              <option value="image/png">PNG (Lossless)</option>
+            </select>
+          </div>
+          <h3>Filters</h3>
+          <div class="control-group">
+            <label for="filter-brightness">Brightness</label>
+            <input
+              type="range"
+              id="filter-brightness"
+              min="0"
+              max="200"
+              value="100"
+            />
+            <span class="value-display" id="brightness-val">100%</span>
+          </div>
+          <div class="control-group">
+            <label for="filter-contrast">Contrast</label>
+            <input
+              type="range"
+              id="filter-contrast"
+              min="0"
+              max="200"
+              value="100"
+            />
+            <span class="value-display" id="contrast-val">100%</span>
+          </div>
+          <div class="control-group">
+            <label for="filter-saturation">Saturate</label>
+            <input
+              type="range"
+              id="filter-saturation"
+              min="0"
+              max="200"
+              value="100"
+            />
+            <span class="value-display" id="saturation-val">100%</span>
+          </div>
+          <div class="control-group">
+            <label for="filter-blur">Blur</label>
+            <input type="range" id="filter-blur" min="0" max="20" value="0" />
+            <span class="value-display" id="blur-val">0px</span>
+          </div>
+          <div class="control-group">
+            <label for="filter-grayscale">Grayscale</label>
+            <input
+              type="range"
+              id="filter-grayscale"
+              min="0"
+              max="100"
+              value="0"
+            />
+            <span class="value-display" id="grayscale-val">0%</span>
+          </div>
+          <button id="download-btn" class="btn" disabled>
+            Download Output
+          </button>
+        </aside>
+        <main class="workspace">
+          <div id="drop-zone" class="upload-zone">
+            <p>Drag & drop your image here or <strong>browse</strong></p>
+            <p class="support-text">Supports JPEG, PNG, WebP</p>
+          </div>
+          <div id="preview-section" class="preview-container hidden">
+            <div class="preview-box">
+              <h3>Original</h3>
+              <img id="orig-preview" alt="Original Preview" />
+              <div id="orig-meta" class="meta-info">Size: 0 KB</div>
+            </div>
+            <div class="preview-box">
+              <h3>Processed Result</h3>
+              <canvas id="output-canvas"></canvas>
+              <div id="output-meta" class="meta-info">Size: 0 KB</div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
