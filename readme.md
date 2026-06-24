@@ -1,10 +1,12 @@
 # Image Optimizer Pro
 
-A modern browser-based image optimization and editing tool that lets users compress, resize, convert, and enhance images directly in their browser.
+A modern browser-based image optimization and editing tool that allows users to compress, resize, convert, and enhance images directly in their browser.
 
 No uploads. No servers. No tracking.
 
-Everything runs locally using JavaScript and the Canvas API.
+Everything runs locally using JavaScript and the Canvas API, ensuring complete privacy and fast performance.
+
+---
 
 ## Features
 
@@ -14,14 +16,32 @@ Everything runs locally using JavaScript and the Canvas API.
 - JPEG, PNG, and WebP support
 - Real-time file size comparison
 - Compression savings calculation
+- Client-side processing
 
 ### Image Resizing
 
 - Resize images using a width slider
 - Maintains original aspect ratio
 - High-resolution image support
+- Instant preview updates
 
-### Image Filters
+### Image Transformations
+
+- Rotate images (0°, 90°, 180°, 270°)
+- Flip horizontally
+- Flip vertically
+- Real-time canvas rendering
+
+### Preset Filters
+
+- Vintage
+- Monochrome
+- Vibrant
+- Cool Cinematic
+- Warm Glow
+- Custom editing mode
+
+### Manual Image Filters
 
 - Brightness adjustment
 - Contrast adjustment
@@ -38,13 +58,20 @@ Convert images between:
 - PNG
 - WebP
 
+### Dark Mode
+
+- One-click theme switching
+- Modern dark interface
+- Improved user experience during low-light usage
+
 ### User Experience
 
 - Drag and drop image upload
-- Instant preview
+- Instant image preview
 - Responsive design
 - One-click download
 - Browser-only processing
+- No dependencies required
 
 ### Privacy First
 
@@ -68,11 +95,12 @@ No files are uploaded to any server.
 ## Project Structure
 
 ```text
-image-compressor-filter-studio/
+image-optimizer-pro/
 │
 ├── index.html
 ├── style.css
 ├── script.js
+├── LICENSE
 └── README.md
 ```
 
@@ -83,13 +111,13 @@ image-compressor-filter-studio/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YashGPT-Dev/image-compressor-filter-studio.git
+git clone https://github.com/YashGPT-Dev/image-optimizer-pro.git
 ```
 
 ### Navigate to Project
 
 ```bash
-cd image-compressor-filter-studio
+cd image-optimizer-pro
 ```
 
 ### Run
@@ -111,33 +139,45 @@ No dependencies or installation required.
 1. Upload or drag an image.
 2. Adjust compression quality.
 3. Resize the image if needed.
-4. Apply filters.
-5. Select output format.
-6. Download the optimized image.
+4. Apply preset or custom filters.
+5. Rotate or flip the image.
+6. Select output format.
+7. Download the processed image.
 
 All processing happens directly in your browser.
 
 ---
 
+## Performance & Privacy
+
+- 100% Client-Side Processing
+- No Cloud Uploads
+- No Data Collection
+- Fast Real-Time Preview
+- Works Offline
+
+---
+
 ## Future Improvements
 
-- Crop tool
-- Rotate and flip controls
-- Batch image compression
-- Before/After comparison slider
-- Dark mode
-- EXIF metadata removal
-- Image watermarking
-- Preset filters
+- Crop Tool
+- Batch Image Compression
+- Image Watermarking
+- Before/After Comparison Slider
+- EXIF Metadata Removal
+- Image History / Undo-Redo
+- Drag-and-Drop Reordering for Batch Processing
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
 ## Author
 
 Yash Gupta
+
+GitHub: https://github.com/YashGPT-Dev

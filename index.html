@@ -9,7 +9,16 @@
   <body>
     <div class="container">
       <header>
-        <h1>Image Compressor & Filter Studio</h1>
+        <div class="header-main">
+          <h1>Image Compressor & Filter Studio</h1>
+          <button
+            id="dark-mode-toggle"
+            class="btn btn-toggle"
+            aria-label="Toggle Dark Mode"
+          >
+            🌙 Dark Mode
+          </button>
+        </div>
         <p>100% private, browser-based image optimization and editing tool.</p>
       </header>
       <div class="studio-layout">
@@ -23,6 +32,7 @@
             />
           </div>
           <hr class="divider" />
+
           <h3>Compression</h3>
           <div class="control-group">
             <label for="compress-quality">Quality (JPEG/WebP)</label>
@@ -55,7 +65,41 @@
               <option value="image/png">PNG (Lossless)</option>
             </select>
           </div>
-          <h3>Filters</h3>
+
+          <h3>Transform</h3>
+          <div class="control-group">
+            <label for="rotate-slider">Rotate</label>
+            <input
+              type="range"
+              id="rotate-slider"
+              min="0"
+              max="270"
+              value="0"
+              step="90"
+            />
+            <span class="value-display" id="rotate-val">0°</span>
+          </div>
+          <div class="control-group-row">
+            <button id="flip-h-btn" class="btn btn-small">
+              Flip Horizontal
+            </button>
+            <button id="flip-v-btn" class="btn btn-small">Flip Vertical</button>
+          </div>
+
+          <h3>Preset Filters</h3>
+          <div class="control-group">
+            <label for="preset-select">Choose Preset</label>
+            <select id="preset-select">
+              <option value="none">None (Custom)</option>
+              <option value="vintage">Vintage</option>
+              <option value="monochrome">Monochrome</option>
+              <option value="vibrant">Vibrant</option>
+              <option value="cool">Cool Cinematic</option>
+              <option value="warm">Warm Glow</option>
+            </select>
+          </div>
+
+          <h3>Manual Filters</h3>
           <div class="control-group">
             <label for="filter-brightness">Brightness</label>
             <input
