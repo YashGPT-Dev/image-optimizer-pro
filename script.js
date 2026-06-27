@@ -265,6 +265,15 @@ function processImage() {
     targetWidth,
     targetHeight,
   );
+  // Watermark
+  ctx.font = `${targetWidth / 25}px Arial`;
+  ctx.fillStyle = "rgba(255,255,255,0.6)";
+  ctx.textAlign = "right";
+  ctx.fillText(
+    "© Image Optimizer Pro",
+    targetWidth / 2 - 20,
+    targetHeight / 2 - 20,
+  );
   ctx.restore();
 
   const mimeType = formatSelect.value;
